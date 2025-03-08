@@ -1,11 +1,28 @@
+*{
+  margin: 0;
+   
+
+}
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgb(22, 22, 24);
+
 }
+i{
+  color: white;
+}
+nav{
+  background-color: black;
+}
+
 main {
-  flex-grow: 1;
+  flex-grow: 1; 
+   background-color: rgb(22, 22, 24);
+   overflow-x: hidden;
+}
+footer{
+  background-color: rgb(22, 22, 24);
 }
 .logoCancion img {
   width: 35%;
@@ -41,6 +58,7 @@ main {
   .bannerscarousel {
     height: 500px;
   }
+  
 }
 
 /* styles.css */
