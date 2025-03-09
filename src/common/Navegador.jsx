@@ -3,10 +3,10 @@ import { NavLink } from "react-router-dom"
 const Navegador = () => {
   return (
 
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navegador navbar navbar-expand-lg bg-body-black color-white">
     <div className="container-fluid">
       <a className="navbar-brand" href="/">
-        <i className="bi bi-youtube text-danger me-2"></i>YOUMUSIC
+        <i className=" text-white me-2">YOUMUSIC</i>
       </a>
 
       <div className="d-none d-md-block">
@@ -21,7 +21,7 @@ const Navegador = () => {
         <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <div className=" collapse navbar-collapse " id="navbarSupportedContent">
         <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
           <li className="nav-item">
             <a className="nav-link" href="/pages/administrador.html" id="mostrarAdmin" style={{ display: "none" }}>Administrador</a>
@@ -31,12 +31,12 @@ const Navegador = () => {
             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
               Ingresá
             </a>
-            <ul className="dropdown-menu">
+            <ul className="dropdown-menu bg-body-black">
               <li>
                 <a className="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Iniciar Sesión</a>
               </li>
-              <li>
-                <a className="dropdown-item" href="/pages/registro.html">Registrarse</a>
+              <li className="nav-item">
+             <NavLink className={"nav-error"} end to ={"/error"}>Registrarse</NavLink>
               </li>
             </ul>
           </li>

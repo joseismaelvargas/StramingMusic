@@ -12,8 +12,11 @@ const Nosotros = () => {
           alt="straming"
         />
       </div>
-      <div classNameName="col-12 col-md-6">
+      <div className="col-12 col-md-6">
         <h1 className="title-Sobrenosotros">Nuestra Misión</h1>
+        <div>
+          
+        </div>
         <p className="parrafoSobrenosotros">
           Nuestra misión es ofrecer una experiencia musical e inigualable,
           conectando a nuestros usuarios con la música que aman, en cualquier
