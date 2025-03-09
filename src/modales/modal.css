@@ -1,0 +1,11 @@
+/* .modal{
+    background-color: rgb(27, 27, 27);
+} */
+ .modal-content{
+    background-color: rgb(34, 33, 33);
+    border: solid 1px rgb(61, 61, 61);
+    color: white;
+ }
+ .btn-close{
+  color: white;
+ }

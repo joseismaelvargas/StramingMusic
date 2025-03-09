@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Administrador = () => {
+export const Administrador = () => {
   return (
    <>
    <h1 className="text-center text-success fw-light">

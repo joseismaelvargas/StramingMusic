@@ -4,11 +4,44 @@ footer{
    text-align: center;
    color: white;
 }
-nav{
-    background-color: black;
+.navegador{
+    background-color: rgb(43, 41, 41);
+}
+.modalseccion{
+    background-color: rgb(43, 41, 41) ;
 }
 .link{
     text-decoration: none;
     color: black;
     
 }
+.nav-link{
+color: rgb(255, 255, 255);
+font-size: 24px;
+}
+.nav-error{
+    color: rgb(0, 0, 0);
+    margin: 0px 16px;
+    text-decoration: none;
+    }
+    @media(max-width:508px){
+        .item-logos>li{
+         
+            display: flex;
+            margin: 0px 30px;
+
+        }
+        .item-logos>ul{
+            display: flex;
+            width: 400px;
+        
+            justify-content: center;
+               margin: 0px 20px;
+           flex-direction: row;
+        }
+          .nav-link{
+            margin: 0px 22px;
+            font-weight: bold;
+            font-size: 35px;
+          }
+       }
