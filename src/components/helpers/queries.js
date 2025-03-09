@@ -5,7 +5,7 @@ const usuariosAdmin={
 }
 export  const logearAdmin=(usuario)=>{
  if(usuariosAdmin.pasword===usuario.pasword&&usuariosAdmin.email===usuario.email){
-    sessionStorage.setItem("ecomert",JSON.stringify(usuariosAdmin.email)) 
+    sessionStorage.setItem("streaming",JSON.stringify(usuariosAdmin.email)) 
     return true
  }else{
     return false

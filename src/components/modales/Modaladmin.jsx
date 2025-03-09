@@ -1,46 +1,18 @@
 import React from 'react'
 
-export const Administrador = () => {
+const Modaladmin = () => {
   return (
-   <>
-   <h1 className="text-center text-success fw-light">
-        Administra Tus Canciones
-      </h1>
-      <hr />
-      <div className="table-responsive mt-5">
-        <table
-          className="table table-hover table-bordered border-light text-center"
-        >
-          <thead className="table-primary">
-            <tr>
-              <th>ID</th>
-              <th>GRUPO</th>
-              <th>CATEGORIA</th>
-              <th>TITULO</th>
-              <th>CANCION</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      </div>
-
-      <section className="text-end my-5">
-        <button className="btn btn-outline-success" id="btnCanciones">
-          <b>AGREGAR CANCION</b>
-        </button>
-      </section>
-
-      <hr />
   
-
     <div
-      className="modal fade"
-      id="ModalAdminCanciones"
+       className="modal fade"
+      id="modalLogin"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
       tabindex="-1"
-      aria-labelledby="ModalAdminCancionesLabel"
+      aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
+     
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header bg-black bg-gradient text-white">
@@ -144,8 +116,7 @@ export const Administrador = () => {
         </div>
       </div>
     </div>
-   </>
   )
 }
 
-export default Administrador
+export default Modaladmin

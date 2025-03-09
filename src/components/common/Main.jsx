@@ -1,11 +1,11 @@
 
-import Index from "../components/Index"
+import Index from "../Index"
 import { ModalLogin } from "../modales/ModalLogin"
-const Main = () => {
+const Main = ({setLogeado}) => {
   return (
  <main>
 <Index></Index>
-<ModalLogin></ModalLogin>
+<ModalLogin setLogeado={setLogeado}></ModalLogin>
  </main>
   )
 }

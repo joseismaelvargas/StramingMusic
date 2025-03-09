@@ -1,6 +1,6 @@
 import"./nav.css"
 import { NavLink ,Link} from "react-router-dom"
-const Navegador = () => {
+const Navegador = ({logeado}) => {
   return (
 
     <nav className="navegador navbar navbar-expand-lg bg-body-black color-white">
@@ -42,11 +42,14 @@ const Navegador = () => {
           <li className="nav-link">
            <NavLink className={"nav-link"}  end to={"/nosotros"}><i class="bi bi-emoji-smile-fill text-danger"></i></NavLink>
           </li>
-          <li className="nav-link">
+          {
+            logeado.length>0?<li className="nav-link">
           <Link className="" end to={"/admin"}>
              <i className="bi bi-gear-fill text-danger nav-link"></i>     </Link>
 
-          </li>
+          </li>:null
+          }
+          
 
           <li className="nav-link">
      

@@ -1,4 +1,4 @@
-import "../components/css/nosotros.css"
+// import "../components/css/nosotros.css"
 export const Error404=()=>{
     return(
         <>
