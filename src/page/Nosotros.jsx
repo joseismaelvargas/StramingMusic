@@ -1,9 +1,9 @@
-
+import "../components/css/nosotros.css"
 
 const Nosotros = () => {
   return (
     <>
-    <section className="container-fluid section-info">
+    <section className="nosotros container-fluid section-info">
     <div className="row div-section">
       <div className="col-12 col-md-6">
         <img
@@ -84,44 +84,8 @@ const Nosotros = () => {
       </div>
     </div>
   </section>
-  <hr />
-  <section className="container Nosotros">
-    <div className="row info">
-      <h2 className="title-quienessomos">Quienes somos</h2>
-      <div className="col-12 col-md-3 info-nosotros">
-        <img
-          className="avatar"
-          src="../img/sobreNosotros/Imagen de WhatsApp 2024-09-03 a las 11.38.54_a7bf2e4a.jpg"
-          alt="avatar"
-        />
-        <p className="nombre">Gonzalez Axel</p>
-        <p className="desarollador">Frontend</p>
-      </div>
-      <div className="col-12 col-md-3 info-nosotros">
-        <img className="avatar" src="../img/sobreNosotros/Imagen de WhatsApp 2024-09-03 a las 11.38.54_b14b19d5.jpg" alt="avatar" />
-        <p className="nombre">Pereyra Franco</p>
-        <p className="desarollador">Frontend</p>
-      </div>
-      <div className="col-12 col-md-3 info-nosotros">
-        <img
-          className="avatar"
-          src="../img/sobreNosotros/Imagen de WhatsApp 2024-09-03 a las 11.38.55_57bbd6e4.jpg"
-          alt="avatar"
-        />
-        <p className="nombre">Ismael Vargas</p>
-        <p className="desarollador">Frontend</p>
-      </div>
-      <div className="col-12 col-md-3 info-nosotros">
-        <img
-          className="avatar"
-          src="../img/sobreNosotros/Imagen de WhatsApp 2024-09-03 a las 11.38.55_8d41396d.jpg"
-          alt="avatar"
-        />
-        <p className="nombre">Recalde Leonardo</p>
-        <p className="desarollador">Frontend</p>
-      </div>
-    </div>
-  </section></>
+ 
+  </>
   )
 }
 

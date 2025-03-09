@@ -1,7 +1,14 @@
 footer{
-    background-color: black;
-    bottom: 0;
+    background-color: rgb(17, 17, 17);
+   height:100px;
+   text-align: center;
+   color: white;
 }
 nav{
     background-color: black;
+}
+.link{
+    text-decoration: none;
+    color: black;
+    
 }
