@@ -14,7 +14,7 @@ function App() {
     <Navegador></Navegador>
     <Routes>
     <Route path='/' element={<Main></Main>}></Route>
-    <Route path='admin' element={<Nosotros></Nosotros>}></Route>
+    <Route path='/admin' element={<Nosotros></Nosotros>}></Route>
     </Routes>
      <Footer></Footer>
     </BrowserRouter>
