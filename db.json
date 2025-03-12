@@ -1,0 +1,24 @@
+{
+  "musica":[
+         {
+          "id":"01",
+          "grupo-artista":"mana",
+          "genero":"Rock",
+          "titulo":"En el puente de Samblas",
+          "img":"https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
+          "info":"la cancion es de años xx",
+          "cancion":"https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
+
+         },
+         {
+          "id":"02",
+          "grupo-artista":"Enrique",
+          "genero":"Rock",
+          "titulo":"En el puente de Samblas",
+          "img":"https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
+          "info":"la cancion es de años xx",
+          "cancion":"https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
+
+         }
+  ]
+}

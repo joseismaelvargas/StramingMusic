@@ -1,6 +1,11 @@
 import React from 'react'
-
+import { useForm } from "react-hook-form"
 const Modaladmin = () => {
+    const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
+
+    const agregarCanciones=(e)=>{
+       alert("ff")
+    }
   return (
   
     <div
@@ -26,7 +31,7 @@ const Modaladmin = () => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body">
+          <div className="modal-body" onSubmit={handleSubmit(agregarCanciones)}>
             <form id="formularioCanciones">
               <div className="mb-3">
                 <label for="Grupo" className="form-label">Grupo/Artista*</label>
@@ -74,16 +79,9 @@ const Modaladmin = () => {
                 />
               </div>
               <div className="mb-3">
-                <label for="Duracion" className="form-label">Duracion*</label>
-                <input
-                  type="text"
-                  className="form-control border border-3 border-info-subtle"
-                  id="Duracion"
-                  minlength="1"
-                  maxlength="100"
-                  placeholder="3:40"
-                  required
-                />
+                <label  className="form-label">Info de la cancion</label>
+               
+                <textarea name="text" className='form-control border-3 border-info-subtle' ></textarea>
               </div>
               <div className="mb-3">
                 <label for="Cancion" className="form-label"

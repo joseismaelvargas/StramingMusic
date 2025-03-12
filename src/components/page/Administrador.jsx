@@ -1,7 +1,34 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../css/admin.css"
 import Modaladmin from"../modales/Modaladmin.jsx"
+import { URL_musica } from '../helpers/queries.js'
+import { useState } from 'react'
 export const Administrador = () => {
+  const[lista,setLista]=useState([])
+
+  const Apimusic=async()=>{
+    try{
+ const response=await(fetch (URL_musica))
+      console.log(response)
+    if(response.status===200){
+      const datos=await response.json()
+     console.log(datos)
+      setLista(datos)
+    }
+
+    }catch{
+     console.log("Error en la solicitud")
+    }
+   
+
+  }
+  const eliminar=(id)=>{
+      console.log(id)
+  }
+  useEffect(()=>{
+   Apimusic()
+  },[])
+  console.log(lista)
   return (
    <>
    <section className='section-admin ' >
@@ -13,32 +40,48 @@ export const Administrador = () => {
           <b>AGREGAR CANCION</b>
         </button>
       <hr />
-      <div className="table-responsive mt-5 container">
+      <div className="table-responsive mt-5 container-fluid">
         <table
           className="table table-hover table-bordered border-light text-center"
         >
           <thead className="table-primary">
             <tr>
-              <th>ID</th>
+              <th>TITULO</th>
               <th>GRUPO</th>
               <th>CATEGORIA</th>
-              <th>TITULO</th>
+          
               <th>CANCION</th>
-              <th></th>
+              <th>OPCIONES</th>
             </tr>
           </thead>
           <tbody>
-
+           {
+            lista.map((item)=>
+              <tr key={item.id}>
+                  <td>{item.titulo}</td>
+                  <td>{item["grupo-artista"]}</td>
+                  <td>{item.genero}</td>
+                 
+                  <td>
+                  <audio controls autoPlay>
+        <source src={item.cancion} type="audio/mpeg" />
+        Tu navegador no soporta la reproducción de audio.
+      </audio></td>
+                  <td>
+                    <button class="btn btn-outline-danger mb-2 mb-md-0" onclick={()=>eliminar(item.id)}>Eliminar</button>
+                    <button class="btn btn-outline-success" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Modificar</button>
+                  </td>
+                </tr>
+            )
+           }
           </tbody>
         </table>
       </div>
 
-      {/* <section className="text-end my-5"> */}
-       
-      {/* </section> */}
+      
 
       <hr />
-   {/* modla */}
+ 
    <Modaladmin></Modaladmin>
     </section>
    </>
