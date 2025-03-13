@@ -1,6 +1,30 @@
 
+import { useEffect, useState } from "react"
 import "./css/index.css"
+import { URL_musica } from "./helpers/queries"
+
+
 const Index = () => {
+const[card,setCard]=useState([])
+
+const Api=async()=>{
+  try{
+  const response=await(fetch(URL_musica))
+  
+  if(response.status===200){
+    const data=await response.json()
+    setCard(data)
+
+  }
+  }catch{
+    console.error("Error en la solicitud")
+  }
+
+}
+useEffect(()=>{
+ Api()
+}, [])
+console.log(card)
   return (
    <>
     <section class="row">
@@ -93,12 +117,27 @@ const Index = () => {
           </div>
         </article>
       </section>
-
+      
+       
       <div class="container mt-5">
-        <h1 class="mb-4">Canciones Para Ti:</h1>
-        <div id="carddefotos" class="row">
-     
-        </div>
+        <h1 className="title-canciones mb-4" >Canciones Para Ti:</h1>
+       
+         <div className="contenedor-musica container">
+            {
+            card.map((item)=>
+              <div className="card" key={item.id}>
+                     <iframe width="300" height="200" src={item.cancion} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+                <div className="info-card">
+                  <p className="card-titulo">  {item.titulo}</p>
+                  <p className="card-Grupo"> {item.artistaGrupo}</p>
+                   
+                </div>
+              </div>
+            )
+          }
+
+         </div>
       
       </div>
    </>

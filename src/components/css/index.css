@@ -18,7 +18,37 @@ body {
   .ms-10 {
     margin-left: 80px;
   }
+  .card{
   
+    color: white;
+    width: 300px;
+    height: 250px;
+   background-color: rgb(22, 22, 24) ;
+   margin: 10px;
+
+  }
+  .title-canciones{
+    color: white;
+  }
+  .card-info{
+ text-align: start;
+ 
+  }
+  .card-titulo{
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .card-Grupo{
+    font-size: 17px
+  }
+  .contenedor-musica{
+   display: flex;
+   justify-content: space-between;
+   overflow-y: hidden;
+   height: auto;
+   flex-wrap: wrap;
+ 
+  }
   @media all and (max-width: 767px) {
     .padreInfo {
       display: flex;
@@ -31,6 +61,7 @@ body {
       margin: 0px auto;
    
     }
+    
   }
   
   .card-img-top {

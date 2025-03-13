@@ -1,31 +1,14 @@
 {
   "musica": [
+  
     {
-      "artistaGrupo": "mes",
-      "genero": "sssssssssssss",
-      "titulo": "aaaaaaaaaaaa",
-      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "ssssssssssssssssssssssssssss",
-      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "id": "497ab874-6c53-496c-b698-f50fad50c78c"
-    },
-    {
-      "id": "2dddc0cc-872c-4cf7-bb48-bd67051cf974",
-      "artistaGrupo": "pepiro",
-      "genero": "ffsafsajfjjfssafsaslkf",
-      "titulo": "aaaaaaaaaaaa",
-      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "iuggiigoggo",
-      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
-    },
-    {
-      "id": "86d354c2-b529-4808-8a52-e1474b5681f7",
-      "artistaGrupo": "las patillas del abuelo",
-      "genero": "cssssssssssssssssssssssssss",
-      "titulo": "dddddddddddddd",
-      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "fffffffffffffffffff",
-      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
+      "id": "a1d7b702-f8a3-4197-ab7f-f97c175b8a6f",
+      "artistaGrupo": "nanananan",
+      "genero": "maa",
+      "titulo": "sssssss",
+      "img": "sssssssssssss",
+      "info": "sssssssssssssssss",
+      "cancion": "https://www.youtube.com/embed/QczGoCmX-pI"
     }
   ]
 }

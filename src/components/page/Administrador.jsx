@@ -11,7 +11,7 @@ export const Administrador = () => {
   const Apimusic=async()=>{
     try{
  const response=await(fetch (URL_musica))
-      console.log(response)
+     
     if(response.status===200){
       const datos=await response.json()
      console.log(datos)
@@ -80,10 +80,15 @@ export const Administrador = () => {
                   <td>{item.genero}</td>
                  
                   <td>
-                  <audio controls autoPlay>
-        <source src={item.cancion} type="audio/mpeg" />
-        Tu navegador no soporta la reproducción de audio.
-      </audio></td>
+                  <iframe
+  width="250"
+  height="140"
+  src={`https://www.youtube.com/embed/${item.cancion.split('v=')[1]}`}
+  frameBorder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+            </td>
                   <td>
                     <button class="btn btn-outline-danger mb-2 mb-md-0" onClick={()=>eliminar(item.id)}>Eliminar</button>
                     <button class="btn btn-outline-success"  onClick={()=>modificar(item.id)}  href="#" data-bs-toggle="modal" data-bs-target="#modalLogin2">Modificar</button>
