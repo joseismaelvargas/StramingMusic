@@ -2,9 +2,10 @@ import React, { useEffect } from 'react'
 import "../css/admin.css"
 import Modaladmin from"../modales/Modaladmin.jsx"
 import { URL_musica } from '../helpers/queries.js'
+import { borrarCancion } from '../helpers/queries.js'
 import { useState } from 'react'
 export const Administrador = () => {
-  const[lista,setLista]=useState([])
+  const[lista,setLista]=useState([])|| []
 
   const Apimusic=async()=>{
     try{
@@ -13,17 +14,28 @@ export const Administrador = () => {
     if(response.status===200){
       const datos=await response.json()
      console.log(datos)
-      setLista(datos)
+
+     setLista(datos);  // Si no hay datos, pasamos un arreglo vacío
     }
 
     }catch{
      console.log("Error en la solicitud")
+     setLista([]); // En caso de error, pasamos un arreglo vacío
+
     }
    
 
   }
-  const eliminar=(id)=>{
-      console.log(id)
+  const eliminar=async(id)=>{
+      try{
+         const response=await borrarCancion(id)
+         if(response.status===200){
+              const data=await response.json()
+              setLista(data)
+         }
+      }catch{
+        console.error("Nose pudo borrar la musica")
+      }
   }
   useEffect(()=>{
    Apimusic()
@@ -42,7 +54,7 @@ export const Administrador = () => {
       <hr />
       <div className="table-responsive mt-5 container-fluid">
         <table
-          className="table table-hover table-bordered border-light text-center"
+          className="table table-hover table-bordered border-light  text-center"
         >
           <thead className="table-primary">
             <tr>
@@ -59,7 +71,7 @@ export const Administrador = () => {
             lista.map((item)=>
               <tr key={item.id}>
                   <td>{item.titulo}</td>
-                  <td>{item["grupo-artista"]}</td>
+                  <td>{item.artistaGrupo}</td>
                   <td>{item.genero}</td>
                  
                   <td>
@@ -68,7 +80,7 @@ export const Administrador = () => {
         Tu navegador no soporta la reproducción de audio.
       </audio></td>
                   <td>
-                    <button class="btn btn-outline-danger mb-2 mb-md-0" onclick={()=>eliminar(item.id)}>Eliminar</button>
+                    <button class="btn btn-outline-danger mb-2 mb-md-0" onClick={()=>eliminar(item.id)}>Eliminar</button>
                     <button class="btn btn-outline-success" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Modificar</button>
                   </td>
                 </tr>
@@ -82,7 +94,7 @@ export const Administrador = () => {
 
       <hr />
  
-   <Modaladmin></Modaladmin>
+   <Modaladmin setLista={setLista}></Modaladmin>
     </section>
    </>
   )

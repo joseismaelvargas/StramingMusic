@@ -1,10 +1,41 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
-const Modaladmin = () => {
+import{ v4 as uuidv4}from'uuid'
+import { agregarCanciones } from '../helpers/queries'
+const Modaladmin = ({setLista}) => {
     const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
+    const [cancion,setCancion]=useState([])
+    const agregar=(data
+    )=>{
+      
+       let objecancion={
+        artistaGrupo:data.artistaGrupo,
+        genero:data.genero,
+        titulo:data.titulo,
+        img:data.img,
+        info:data.info,
+        cancion:data.cancion,
+        id:uuidv4()
 
-    const agregarCanciones=(e)=>{
-       alert("ff")
+
+        
+       }
+      agregarMusica(objecancion)  
+      
+    }
+    const agregarMusica=async(objecancion)=>{
+      try{
+         const response=await fetch(agregarCanciones(objecancion))
+         if(response.status===201){
+              const actulizar=await response.json()
+              setLista(actulizar)
+               if(actulizar){
+                location.reload()
+               }
+         }
+      }catch{
+        console.log("Error al agregar")
+      }
     }
   return (
   
@@ -31,7 +62,7 @@ const Modaladmin = () => {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body" onSubmit={handleSubmit(agregarCanciones)}>
+          <div className="modal-body" onSubmit={handleSubmit(agregar)}>
             <form id="formularioCanciones">
               <div className="mb-3">
                 <label for="Grupo" className="form-label">Grupo/Artista*</label>
@@ -40,7 +71,7 @@ const Modaladmin = () => {
                   className="form-control border border-3 border-info-subtle"
                   id="Grupo"
                   placeholder="Las Pastillas del Abuelo"
-                  required
+                  required {...register("artistaGrupo")}
                 />
                 <div className="invalid-feedback">Escribe el nombre completo, debe contener mas de 3 carácteres</div>
               </div>
@@ -52,6 +83,7 @@ const Modaladmin = () => {
                   id="Categoria"
                   placeholder="Rock"
                   required
+                  {...register("genero")}
                 />
                 <div className="invalid-feedback">Escribe un género completo, debe contener mas de 3 carácteres </div>
               </div>
@@ -63,6 +95,7 @@ const Modaladmin = () => {
                   id="Titulo"
                   placeholder="¿Que es Dios?"
                   required
+                  {...register("titulo")}
                 />
                 <div className="invalid-feedback">Escribe el nombre completo, debe contener mas de 3 carácteres</div>
               </div>
@@ -76,12 +109,13 @@ const Modaladmin = () => {
                   maxlength="100"
                   placeholder="Url"
                   required
+                   {...register("img")}
                 />
               </div>
               <div className="mb-3">
                 <label  className="form-label">Info de la cancion</label>
                
-                <textarea name="text" className='form-control border-3 border-info-subtle' ></textarea>
+                <textarea name="text" className='form-control border-3 border-info-subtle' {...register("info")} ></textarea>
               </div>
               <div className="mb-3">
                 <label for="Cancion" className="form-label"
@@ -95,6 +129,7 @@ const Modaladmin = () => {
                   maxlength="100"
                   placeholder="url MP3"
                   required
+                  {...register("cancion") }
                 />
               </div>
 
