@@ -1,47 +1,42 @@
-import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
-import{ v4 as uuidv4}from'uuid'
-import { agregarCanciones } from '../helpers/queries'
-export const Modaladminagregar= ({setLista}) => {
-    const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
-
-    const agregar=(data
-    )=>{
-      
-       let objecancion={
+import { modificarCancion } from "../helpers/queries";
+export const Modalmodificar=({setLista,id})=>{
+    const idAdmin=id
+    console.log(idAdmin)
+     const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
+    const modificar=(data)=>{
+      let objecancion={
         artistaGrupo:data.artistaGrupo,
         genero:data.genero,
         titulo:data.titulo,
         img:data.img,
         info:data.info,
         cancion:data.cancion,
-        id:uuidv4()
-
+        id:idAdmin
 
         
        }
-      agregarMusica(objecancion)  
+       
+       modificacionApi(objecancion,idAdmin)
        location.reload()
     }
-    const agregarMusica=async(objecancion)=>{
-      try{
-         const response=await fetch(agregarCanciones(objecancion))
-         if(response.status===201){
-              const actulizar=await response.json()
-              setLista(actulizar)
-             
-              
-             
-         }
-      }catch{
-        console.log("Error al agregar")
-      }
+    const modificacionApi=async(objecancion,id)=>{
+        try{
+            const response=await (modificarCancion(objecancion,id))
+            if(response.status===200){
+                const actulizar=await response.json()
+                setLista(actulizar)
+            }
+        }catch{
+            console.error("error al modificar")
+        }
+       
     }
-  return (
-  <>
-    <div
+    return(
+        <>
+        <div
         className="modal fade"
-        id="modalLogin"
+        id="modalLogin2"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex="-1"
@@ -52,7 +47,7 @@ export const Modaladminagregar= ({setLista}) => {
           <div className="modal-content">
             <div className="modal-header bg-black bg-gradient text-white">
               <h2 className="modal-title fs-5" id="ModalAdminCancionesLabel">
-                Agregue
+            Modifique Sus Canciones
               </h2>
               <button
                 type="button"
@@ -62,7 +57,7 @@ export const Modaladminagregar= ({setLista}) => {
               ></button>
             </div>
             <div className="modal-body">
-              <form onSubmit={handleSubmit(agregar)} id="formularioCanciones">
+              <form onSubmit={handleSubmit(modificar)} id="formularioCanciones">
                 <div className="mb-3">
                   <label htmlFor="Grupo" className="form-label">Grupo/Artista*</label>
                   <input
@@ -158,6 +153,6 @@ export const Modaladminagregar= ({setLista}) => {
           </div>
         </div>
       </div>
-    </>
-  )
+        </>
+    )
 }

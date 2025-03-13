@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import "../css/admin.css"
-import Modaladmin from"../modales/Modaladmin.jsx"
+import { Modaladminagregar } from '../modales/Modaladmin.jsx'
+import { Modalmodificar } from '../modales/Modalmodificar.jsx'
 import { URL_musica } from '../helpers/queries.js'
 import { borrarCancion } from '../helpers/queries.js'
 import { useState } from 'react'
 export const Administrador = () => {
   const[lista,setLista]=useState([])|| []
-
+  const[id,setid]=useState()
   const Apimusic=async()=>{
     try{
  const response=await(fetch (URL_musica))
@@ -15,12 +16,12 @@ export const Administrador = () => {
       const datos=await response.json()
      console.log(datos)
 
-     setLista(datos);  // Si no hay datos, pasamos un arreglo vacío
+     setLista(datos);  
     }
 
     }catch{
      console.log("Error en la solicitud")
-     setLista([]); // En caso de error, pasamos un arreglo vacío
+     setLista([]);
 
     }
    
@@ -37,6 +38,10 @@ export const Administrador = () => {
         console.error("Nose pudo borrar la musica")
       }
   }
+  const modificar=(id)=>{
+    setid(id)
+  }
+ 
   useEffect(()=>{
    Apimusic()
   },[])
@@ -81,7 +86,7 @@ export const Administrador = () => {
       </audio></td>
                   <td>
                     <button class="btn btn-outline-danger mb-2 mb-md-0" onClick={()=>eliminar(item.id)}>Eliminar</button>
-                    <button class="btn btn-outline-success" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Modificar</button>
+                    <button class="btn btn-outline-success"  onClick={()=>modificar(item.id)}  href="#" data-bs-toggle="modal" data-bs-target="#modalLogin2">Modificar</button>
                   </td>
                 </tr>
             )
@@ -94,7 +99,8 @@ export const Administrador = () => {
 
       <hr />
  
-   <Modaladmin setLista={setLista}></Modaladmin>
+   <Modaladminagregar setLista={setLista}></Modaladminagregar>
+   <Modalmodificar setLista={setLista} id={id}></Modalmodificar>
     </section>
    </>
   )

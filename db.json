@@ -1,66 +1,30 @@
 {
   "musica": [
     {
-      "id": "04",
-      "artistaGrupo": "Enrique",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
-    },
-    {
-      "id": "09",
-      "artistaGrupo": "Enrique",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
-    },
-    {
-      "id": "08",
-      "grupo-artista": "Enrique",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
-    },
-    {
-      "id": "497ab874-6c53-496c-b698-f50fad50c78c",
-      "artistaGrupo": "pe",
-      "genero": "ssssssssssssss",
-      "titulo": "ssssssssssssssss",
+      "artistaGrupo": "mes",
+      "genero": "sssssssssssss",
+      "titulo": "aaaaaaaaaaaa",
       "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "ddddddddddddddddddd",
+      "info": "ssssssssssssssssssssssssssss",
+      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
+      "id": "497ab874-6c53-496c-b698-f50fad50c78c"
+    },
+    {
+      "id": "2dddc0cc-872c-4cf7-bb48-bd67051cf974",
+      "artistaGrupo": "pepiro",
+      "genero": "ffsafsajfjjfssafsaslkf",
+      "titulo": "aaaaaaaaaaaa",
+      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
+      "info": "iuggiigoggo",
       "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
     },
     {
-      "id": "d612c95a-750c-4334-8c5c-6b579925ac94",
-      "artistaGrupo": "pepe",
-      "genero": "ssssssssssssfdff",
-      "titulo": "dssssssssss",
+      "id": "86d354c2-b529-4808-8a52-e1474b5681f7",
+      "artistaGrupo": "las patillas del abuelo",
+      "genero": "cssssssssssssssssssssssssss",
+      "titulo": "dddddddddddddd",
       "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "dddddddddf",
-      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
-    },
-    {
-      "id": "a8777a6f-27b7-4592-b9c6-9774c5760c2c",
-      "artistaGrupo": "pepe",
-      "genero": "ssssssssssssfdff",
-      "titulo": "dssssssssss",
-      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "dddddddddf",
-      "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
-    },
-    {
-      "id": "692265fd-48c0-48e1-8b46-b0d1640b2b23",
-      "artistaGrupo": "pepe",
-      "genero": "ssssssssssssfdff",
-      "titulo": "dssssssssss",
-      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
-      "info": "dddddddddf",
+      "info": "fffffffffffffffffff",
       "cancion": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG"
     }
   ]
