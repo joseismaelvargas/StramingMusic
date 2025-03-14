@@ -1,11 +1,12 @@
 import { useForm } from "react-hook-form"
 import { modificarCancion } from "../helpers/queries";
-export const Modalmodificar=({setLista,id})=>{
+import { useEffect } from "react";
+export const Modalmodificar=({setLista,id,canciondata})=>{
     const idAdmin=id
     console.log(idAdmin)
      const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
     const modificar=(data)=>{
-      let objecancion={
+      let objecancion={ 
         artistaGrupo:data.artistaGrupo,
         genero:data.genero,
         titulo:data.titulo,
@@ -20,6 +21,19 @@ export const Modalmodificar=({setLista,id})=>{
        modificacionApi(objecancion,idAdmin)
        location.reload()
     }
+    useEffect(()=>{
+      if(canciondata){
+        setValue('artistaGrupo',canciondata.artistaGrupo)
+        setValue('genero',canciondata.genero)
+        setValue('titulo',canciondata.titulo)
+        setValue('img',canciondata.img)
+        setValue('info',canciondata.info)
+        setValue('cancion',canciondata.cancion)
+        
+        
+        
+      }
+    },[canciondata,setValue])
     const modificacionApi=async(objecancion,id)=>{
         try{
             const response=await (modificarCancion(objecancion,id))

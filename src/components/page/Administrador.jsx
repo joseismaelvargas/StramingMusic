@@ -7,6 +7,7 @@ import { borrarCancion } from '../helpers/queries.js'
 import { useState } from 'react'
 export const Administrador = () => {
   const[lista,setLista]=useState([])|| []
+  const [canciondata,setCanciondata]=useState([])
   const[id,setid]=useState()
   const Apimusic=async()=>{
     try{
@@ -39,8 +40,11 @@ export const Administrador = () => {
       }
   }
   const modificar=(id)=>{
-    setid(id)
+    const data=lista.find((item)=>item.id===id)
+    setCanciondata(data)
+    setid(id) 
   }
+ 
  
   useEffect(()=>{
    Apimusic()
@@ -81,7 +85,7 @@ export const Administrador = () => {
                  
                   <td>
                   <iframe
-  width="250"
+  width="250" 
   height="140"
   src={`https://www.youtube.com/embed/${item.cancion.split('v=')[1]}`}
   frameBorder="0"
@@ -105,7 +109,7 @@ export const Administrador = () => {
       <hr />
  
    <Modaladminagregar setLista={setLista}></Modaladminagregar>
-   <Modalmodificar setLista={setLista} id={id}></Modalmodificar>
+   <Modalmodificar setLista={setLista} canciondata={canciondata} id={id}></Modalmodificar>
     </section>
    </>
   )
