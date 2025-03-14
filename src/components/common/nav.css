@@ -24,11 +24,12 @@ font-size: 24px;
     margin: 0px 16px;
     text-decoration: none;
     }
+
     @media(max-width:508px){
         .item-logos>li{
          
             display: flex;
-            margin: 0px 30px;
+            margin: 0px 0px;
 
         }
         .item-logos>ul{
@@ -36,12 +37,13 @@ font-size: 24px;
             width: 400px;
         
             justify-content: center;
-               margin: 0px 20px;
+               margin: 0px 10px;
            flex-direction: row;
         }
           .nav-link{
-            margin: 0px 22px;
+            margin: 0px 15px;
+          
             font-weight: bold;
-            font-size: 35px;
+            font-size: 30px;
           }
        }

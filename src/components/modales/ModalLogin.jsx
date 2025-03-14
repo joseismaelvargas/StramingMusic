@@ -19,7 +19,7 @@ export const ModalLogin=()=>{
     return(
         <>
         <div
-      className="modal fade"
+      className=" modal-login modal fade"
       id="modalLogin"
       data-bs-backdrop="static"
       data-bs-keyboard="false"

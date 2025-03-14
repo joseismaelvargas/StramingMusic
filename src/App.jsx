@@ -7,7 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Index from './components/Index'
 import { Error404 } from './components/page/Error404'
 import Nosotros from './components/page/Nosotros'
-import Administrador from './components/page/Administrador'
+import { Administrador } from './components/page/Administrador'
 import { useState } from 'react'
 function App() {
   const usuario=JSON.parse(sessionStorage.getItem("streaming"))||[]
