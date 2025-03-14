@@ -30,7 +30,21 @@ export const borrarCancion=async(id)=>{
       console.log("Error al Borrar",error)
    }
 }
+export const modificarCancion=async(cancion,id)=>{
 
+   try{
+     const response=await fetch(URL_musica+"/"+id,{
+      method:"PUT",
+      headers:{
+         "Content-Type":"application/json"
+      },
+      body:JSON.stringify(cancion)
+     })     
+     return response
+   }catch(error){
+      console.log("error al modificar",error)
+   }
+}
 
 
 

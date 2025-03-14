@@ -1,31 +1,22 @@
 {
   "musica": [
     {
-      "id": "01",
-      "grupo-artista": "mana",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
+      "artistaGrupo": "naruto",
+      "genero": "anime",
+      "titulo": "naruto opening",
+      "img": "https://youtu.be/QczGoCmX-pI?si=iGg0gV_9Ci0a7yKt",
+      "info": "ddddddddddddddddd",
+      "cancion": "https://www.youtube.com/embed/peqHhVNKwyo",
+      "id": "a1d7b702-f8a3-4197-ab7f-f97c175b8a6f"
     },
     {
-      "id": "03",
-      "grupo-artista": "mana",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
-    },
-    {
-      "id": "05",
-      "grupo-artista": "mana",
-      "genero": "Rock",
-      "titulo": "En el puente de Samblas",
-      "img": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180",
-      "info": "la cancion es de años xx",
-      "cancion": "https://tse4.mm.bing.net/th?id=OIP.mY17tufQsjVKySzH2zPu2gHaEK&pid=Api&P=0&h=180"
+      "id": "2414291c-75bf-45f6-87fd-6ce0673e14b4",
+      "artistaGrupo": "dddddddda",
+      "genero": "cssssssssssssssssssssssssss",
+      "titulo": "sjkkkkkkkksss",
+      "img": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxITEhUSExMVFhUXFxgXFxcVFRUVFxUVFRUXFhUVG",
+      "info": "xzzzzzzzzzzzzzz",
+      "cancion": "https://www.youtube.com/embed/QczGoCmX-pI"
     }
   ]
 }

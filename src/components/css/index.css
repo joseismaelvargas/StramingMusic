@@ -18,8 +18,41 @@ body {
   .ms-10 {
     margin-left: 80px;
   }
+  .card{
   
-  @media all and (max-width: 767px) {
+    color: white;
+    width: 300px;
+    height: 250px;
+   background-color: rgb(22, 22, 24) ;
+   margin: 10px;
+
+  }
+  .title-canciones{
+    color: white;
+  }
+  .card-info{
+ text-align: start;
+ 
+  }
+  .card-titulo{
+    font-weight: bold;
+    font-size: 23px;
+  }
+  .card-Grupo{
+    font-size: 17px
+  }
+  .contenedor-musica{
+   display: flex;
+   justify-content: space-between;
+   overflow-y: hidden;
+   height: auto;
+   flex-wrap: wrap;
+ 
+  }
+  .inframe{
+    width: 300px;
+  }
+  @media all and (max-width: 567px) {
     .padreInfo {
       display: flex;
       flex-direction: column;
@@ -31,16 +64,38 @@ body {
       margin: 0px auto;
    
     }
+    
+  }
+  .contenedor-musica{
+    display: flex;
+    flex-wrap:wrap ;
   }
   
   .card-img-top {
     height: 200px;
     object-fit: cover;
-  }
+  } 
+ 
   
-  @media all and (min-width: 992px) {
+  @media only screen and (max-width: 600px)  {
     .bannerscarousel {
       height: 500px;
+    }
+    .contenedor-musica{
+      justify-content: space-between;
+      display: flex;
+      flex-wrap: wrap;
+     
+      height: 600px;
+    }
+     .inframe{
+    width: 191px;
+  }
+  
+    .card{
+ 
+      width: 191px;
+      height: 250px;
     }
   }
   
