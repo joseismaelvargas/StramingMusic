@@ -3,6 +3,7 @@ import "../css/admin.css"
 import Modaladmin from"../modales/Modaladmin.jsx"
 import { URL_musica } from '../helpers/queries.js'
 import { useState } from 'react'
+import { borrarCancion } from '../helpers/queries.js'
 export const Administrador = () => {
   const[lista,setLista]=useState([])
 
@@ -22,10 +23,19 @@ export const Administrador = () => {
    
 
   }
-  const eliminar=(id)=>{
-      console.log(id)
+  const eliminar=async (id)=>{
+ try{
+   const response=await borrarCancion(id)
+   if(response.status===200){
+    const actulisar=await response.json()
+    setLista(actulisar)
+   }
+ }catch{
+  console.log("error al borrar")
+ }
   }
   useEffect(()=>{
+   eliminar()
    Apimusic()
   },[])
   console.log(lista)
@@ -68,7 +78,7 @@ export const Administrador = () => {
         Tu navegador no soporta la reproducción de audio.
       </audio></td>
                   <td>
-                    <button class="btn btn-outline-danger mb-2 mb-md-0" onclick={()=>eliminar(item.id)}>Eliminar</button>
+                    <button class="btn btn-outline-danger mb-2 mb-md-0" onClick={()=>eliminar(item.id)}>Eliminar</button>
                     <button class="btn btn-outline-success" href="#" data-bs-toggle="modal" data-bs-target="#modalLogin">Modificar</button>
                   </td>
                 </tr>
