@@ -4,7 +4,7 @@ import { useEffect } from "react";
 export const Modalmodificar=({setLista,id,canciondata})=>{
     const idAdmin=id
     console.log(idAdmin)
-     const { register, handleSubmit ,formState:{errors},reset,setValue} = useForm();
+     const { register, handleSubmit ,formState:{errors}} = useForm();
     const modificar=(data)=>{
       let objecancion={ 
         artistaGrupo:data.artistaGrupo,

@@ -126,7 +126,8 @@ console.log(card)
             {
             card.map((item)=>
               <div className="card" key={item.id}>
-                     <iframe width="300" height="200" src={item.cancion} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                     <iframe  
+                     className="inframe" src={item.cancion} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
                 <div className="info-card">
                   <p className="card-titulo">  {item.titulo}</p>

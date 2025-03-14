@@ -4,7 +4,8 @@ import { Modaladminagregar } from '../modales/Modaladmin.jsx'
 import { Modalmodificar } from '../modales/Modalmodificar.jsx'
 import { URL_musica } from '../helpers/queries.js'
 import { borrarCancion } from '../helpers/queries.js'
-import { useState } from 'react'
+import { useState} from 'react'
+
 export const Administrador = () => {
   const[lista,setLista]=useState([])|| []
   const [canciondata,setCanciondata]=useState([])
@@ -47,6 +48,7 @@ export const Administrador = () => {
  
  
   useEffect(()=>{
+   eliminar()
    Apimusic()
   },[])
   console.log(lista)
@@ -84,14 +86,7 @@ export const Administrador = () => {
                   <td>{item.genero}</td>
                  
                   <td>
-                  <iframe
-  width="250" 
-  height="140"
-  src={`https://www.youtube.com/embed/${item.cancion.split('v=')[1]}`}
-  frameBorder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+                  <iframe width="300" height="200" src={item.cancion} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </td>
                   <td>
                     <button class="btn btn-outline-danger mb-2 mb-md-0" onClick={()=>eliminar(item.id)}>Eliminar</button>
